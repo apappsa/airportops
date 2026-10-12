@@ -33,7 +33,7 @@ function categoryForAircraft(aircraft: string): 'C' | 'D' | 'E' | 'F' {
   return 'C';
 }
 function statusClass(status: string) {
-  return status.toLowerCase().replaceAll(' ', '-');
+  return status.toLowerCase().replace(/ /g, '-');
 }
 function Status({ value }: { value: string }) {
   return <span className={`status status-${statusClass(value)}`}>{value}</span>;
